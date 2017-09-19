@@ -51,10 +51,9 @@ public class MainActivity extends AppCompatActivity {
                             for (int i = 0; i < jarray.length(); i++) {
                                 JSONObject heroObject = jarray.getJSONObject(i);
 
-                                //creating a hero object and giving them the values from json object
                                 Demo demo = new Demo(heroObject.getString("lelveno"), heroObject.getString("levelname"));
 
-                                //adding the hero to herolist
+
                                 DemoList.add(demo);
                             }
                             ListViewAdapter adapter = new ListViewAdapter(DemoList, getApplicationContext());
